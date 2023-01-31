@@ -8,5 +8,7 @@ def make_archive(filepaths, dest_folder):
             filepath = pathlib.Path(filepath)
             archive.write(filepath, arcname=filepath.name)
 
+"""
 if __name__ == "__main__":
     make_archive(filepaths=["main.py"], dest_folder="dest")
+"""
