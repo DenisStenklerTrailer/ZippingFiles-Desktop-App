@@ -26,6 +26,5 @@ while True:
     window["output"].update("File compressed sucessfully!")
 
 
-
 window.read()
 window.close()
