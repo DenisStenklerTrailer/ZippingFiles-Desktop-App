@@ -14,7 +14,14 @@ compress_button = sg.Button("Compress")
 
 label3 = sg.Text("", key="output")
 
-window = sg.Window("ZIP compressor", layout=[[label1,input1,choose_button1],[label2,input2,choose_button2],[compress_button,label3]], element_justification="center")
+col1 = sg.Column([[label1], [label2]])
+col2 = sg.Column([[input1], [input2]])
+col3 = sg.Column([[choose_button1], [choose_button2]])
+
+window = sg.Window("ZIP compressor",
+                   layout=[[col1, col2, col3],
+                           [compress_button,label3]],
+                   element_justification="center")
 
 while True:
     event, values = window.read()
